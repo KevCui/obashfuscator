@@ -71,7 +71,7 @@ encode_base64() {
         echo "[INFO] base64 encoding $((i+1))..." >&2
         t=$(base64 <<< "$t")
         t="bash -c \"\$(base64 -d <<< \"\\
-"$t")\")\" bash \"\$@\""
+"$t"\")\" bash \"\$@\""
     done
 
     echo "$t"
