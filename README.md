@@ -74,7 +74,7 @@ If you are using `BASH_SOURCE` and `main` function in your bash script, please r
 
 ### Bash error "Argument list too long" when executing obfuscated script
 
-This error will appear when input script size is hug or base64 encoding too many times, the output encoded base64 string is long than [MAX_ARG_STRLEN (131072)](https://www.in-ulm.de/~mascheck/various/argmax/). Split huge size script to several smaller ones or encode less times may help to solve this error.
+This error will appear when the output encoded base64 string is longer than [MAX_ARG_STRLEN (131072)](https://www.in-ulm.de/~mascheck/various/argmax/). It's usually caused by the huge input script size or too many times of base64 encoding. Split huge size script to several smaller ones or encode fewer times may help to solve this error.
 
 ### Is it easy to deobfuscate?
 
