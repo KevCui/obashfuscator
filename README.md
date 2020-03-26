@@ -37,7 +37,7 @@ echo "Hello, world!"
 ~$ ./obashfuscate.sh -f try_me.sh
 ~$ cat try_me_obfuscated.sh
 bash -c "$(base64 -d <<< "\
-IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvLCB3b3JsZCEiCg==)")" bash "$@"
+IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvLCB3b3JsZCEiCg==")" bash "$@"
 ```
 
 - Normal mode, with base64 encoding 5 times:
@@ -53,7 +53,7 @@ aGpORk5WVGt0WgpNRTV5WWtSV1UxZEdjSEpXTUZVeFRsWlNSVk5yZEdwU01IQjNWREZrYzFkc1pF
 Wk9XRnBTVFdwR1dGbFhNVWRUUlRsSVdrVnZTMWxVClNtOWpNV3h5V2tSU2F3cGhNMmhGVlZkd1Qy
 RlZNSGRqU0hCWVlUQTFSMWxXVms5aWJFSlZUVWhDU21GWGRIQlRWV1JMWVVkTmVWb3kKWkVwaFZr
 cENVMWRrZGxCVGEybExVMGxuV1cxR2VtRkRRV2xLUlVGcENrTm5QVDBwSWlraUlHSmhjMmdnSWlS
-QUlnbz0pIikiIGJhc2ggIiRAIgo=)")" bash "$@"
+QUlnbz0pIikiIGJhc2ggIiRAIgo=")" bash "$@"
 ```
 
 - Extended mode, with base64 encoding 2 times and then obfuscated by bash-obfuscate:
