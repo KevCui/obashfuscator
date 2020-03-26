@@ -1,7 +1,7 @@
 obashfuscator
 ============
 
-obashfuscator aims to obfuscate Bash scripts: make script unreadable at first glance and still keep it executable without losing any functionalities.
+obashfuscator obfuscates Bash script in order to make script unreadable at first glance and meanwhile keep it executable without losing any functionalities.
 
 ## Why?
 
