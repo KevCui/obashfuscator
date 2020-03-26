@@ -13,7 +13,7 @@ No dependency for normal mode (base64 encoding). However, for extended mode, [ba
 
 ## Usage
 
-```bash
+```
 Usage:
   ./obashfuscate.sh -f <bash_script> [-n <num>] [-e]
 
@@ -26,7 +26,7 @@ Options:
   -h | --help        Display this help message
 ```
 
-### Example
+### Examples
 
 - Normal mode, with base64 encoding 1 time:
 
@@ -36,7 +36,8 @@ Options:
 echo "Hello, world!"
 ~$ ./obashfuscate.sh -f try_me.sh
 ~$ cat try_me_obfuscated.sh
-bash -c "$(base64 -d <<< "IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvLCB3b3JsZCEiCg==")" bash "$@"
+bash -c "$(base64 -d <<< "\
+IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvLCB3b3JsZCEiCg==)")" bash "$@"
 ```
 
 - Normal mode, with base64 encoding 5 times:
@@ -44,13 +45,15 @@ bash -c "$(base64 -d <<< "IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvLCB3b3JsZCEiCg==")
 ```bash
 ~$ ./obashfuscate.sh -f try_me.sh -n 5
 ~$ cat try_me_obfuscated.sh
-bash -c "$(base64 -d <<< "YmFzaCAtYyAiJChiYXNlNjQgLWQgPDw8ICJZbUZ6YUNBdFl5QWlKQ2hpWVhObE5qUWdMV1FnUER3
-OElDSlpiVVo2WVVOQmRGbDVRV2xLUTJocFdWaE9iRTVxVVdkTVYxRm5VRVIzCk9FbERTbHBpVlZv
-MldWVk9RbVJHYkRWUlYyeExVVEpvY0ZkV2FFOWlSVFZ4VlZka1RWWXhSbTVWUlZJekNrOUZiRVJU
-YTNCc1ZsWloKZVZkcldtOVVNbFpXWkROc1ZHSnJTbkJaVmxKelkwWmtWMkZGT1dsTlJUVXdWbTB4
-ZDJGR1NqWmhSelZVVmpOU2RrTnRTa2hUYTJocwpVMFp3VGxWVVFrb0taV3hzY1ZScmRHcE5XRUpG
-Vld4a2MxSkdjRFpOUkd4S1lWZDBjRk5WWkV0aFIwMTVXakprU21GV1NrSlRWMlIyClVGTkpjRWxw
-UW1sWldFNXZTVU5KYTFGRFNVc2lLU0lnWW1GemFDQWlKRUFpQ2c9PSIpIiBiYXNoICIkQCIK")" bash "$@"
+bash -c "$(base64 -d <<< "\
+YmFzaCAtYyAiJChiYXNlNjQgLWQgPDw8ICJcClltRnphQ0F0WXlBaUpDaGlZWE5sTmpRZ0xXUWdQ
+RHc4SUNKY0NsbHRSbnBoUTBGMFdYbEJhVXBEYUdsWldFNXNUbXBSWjB4WFVXZFEKUkhjNFNVTktZ
+ME5zYkhSU2JuQm9VVEJHTUZkWWJFSmhWWEJFWVVkc1dsZEZOWE5VYlhCU1dqQjRXRlZYWkZFS1Vr
+aGpORk5WVGt0WgpNRTV5WWtSV1UxZEdjSEpXTUZVeFRsWlNSVk5yZEdwU01IQjNWREZrYzFkc1pF
+Wk9XRnBTVFdwR1dGbFhNVWRUUlRsSVdrVnZTMWxVClNtOWpNV3h5V2tSU2F3cGhNMmhGVlZkd1Qy
+RlZNSGRqU0hCWVlUQTFSMWxXVms5aWJFSlZUVWhDU21GWGRIQlRWV1JMWVVkTmVWb3kKWkVwaFZr
+cENVMWRrZGxCVGEybExVMGxuV1cxR2VtRkRRV2xLUlVGcENrTm5QVDBwSWlraUlHSmhjMmdnSWlS
+QUlnbz0pIikiIGJhc2ggIiRAIgo=)")" bash "$@"
 ```
 
 - Extended mode, with base64 encoding 2 times and then obfuscated by bash-obfuscate:
