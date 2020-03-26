@@ -3,7 +3,7 @@
 # Obfuscate bash script
 #
 #/ Usage:
-#/   ./obashfuscate.sh -f <bash_script> [-n <num>] [-e]
+#/   ./obashfuscator.sh -f <bash_script> [-n <num>] [-e]
 #/
 #/ Options:
 #/   -f <bash_script>   Input script to obfuscate

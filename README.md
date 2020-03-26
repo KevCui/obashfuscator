@@ -1,7 +1,7 @@
-obashfuscate
+obashfuscator
 ============
 
-obashfuscate aims to obfuscate Bash scripts: make script unreadable at first glance and still keep it executable without losing any functionalities.
+obashfuscator aims to obfuscate Bash scripts: make script unreadable at first glance and still keep it executable without losing any functionalities.
 
 ## Why?
 
@@ -15,7 +15,7 @@ No dependency for normal mode (base64 encoding). However, for extended mode, [ba
 
 ```
 Usage:
-  ./obashfuscate.sh -f <bash_script> [-n <num>] [-e]
+  ./obashfuscator.sh -f <bash_script> [-n <num>] [-e]
 
 Options:
   -f <bash_script>   Input script to obfuscate
@@ -34,7 +34,7 @@ Options:
 ~$ cat try_me.sh
 #!/usr/bin/bash
 echo "Hello, world!"
-~$ ./obashfuscate.sh -f try_me.sh
+~$ ./obashfuscator.sh -f try_me.sh
 ~$ cat try_me_obfuscated.sh
 bash -c "$(base64 -d <<< "\
 IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvLCB3b3JsZCEiCg==")" bash "$@"
@@ -43,7 +43,7 @@ IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvLCB3b3JsZCEiCg==")" bash "$@"
 - Normal mode, with base64 encoding 5 times:
 
 ```bash
-~$ ./obashfuscate.sh -f try_me.sh -n 5
+~$ ./obashfuscator.sh -f try_me.sh -n 5
 ~$ cat try_me_obfuscated.sh
 bash -c "$(base64 -d <<< "\
 YmFzaCAtYyAiJChiYXNlNjQgLWQgPDw8ICJcClltRnphQ0F0WXlBaUpDaGlZWE5sTmpRZ0xXUWdQ
@@ -59,7 +59,7 @@ QUlnbz0pIikiIGJhc2ggIiRAIgo=")" bash "$@"
 - Extended mode, with base64 encoding 2 times and then obfuscated by bash-obfuscate:
 
 ```bash
-~$ ./obashfuscate.sh -f try_me.sh -n 2 -e
+~$ ./obashfuscator.sh -f try_me.sh -n 2 -e
 ~$ cat try_me_obfuscated.sh
 z="
 ";nz=' "$@';Lz='NlNj';Wz='NtVm';Uz='lpWV';Gz=' "Ym';Az='bash';cz='Q0Iz';Xz='phRz';Bz=' -c ';mz='")" ';Jz='AiJC';hz='Iiki';Ez='4 -d';Sz='wySn';bz='eHZM';ez='c1pD';Yz='hnSW';fz='RWlD';gz='Zz09';iz='IGJh';Iz='AtYy';Rz='hOeU';lz='Igo=';Mz='QgLW';Tz='BiaT';Vz='hOb0';az='bGJH';Kz='hiYX';Oz='w8IC';Nz='QgPD';Qz='V2ZF';Zz='to';kz='IiRA';jz='c2gg';Fz=' <<<';oz='"';Pz='JJeU';Dz='ase6';Hz='FzaC';Cz='"$(b';dz='YjNK';
