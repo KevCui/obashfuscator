@@ -9,7 +9,6 @@
 - [Dependency](#dependency)
 - [Usage](#usage)
   - [Examples](#examples)
-    !/usr/bin/bash])
 - [FAQ](#faq)
   - [Bash error "BASH_SOURCE[0]: unbound variable" when executing obfuscated script](#bash-error-bash_source0-unbound-variable-when-executing-obfuscated-script)
   - [Bash error "Argument list too long" when executing obfuscated script](#bash-error-argument-list-too-long-when-executing-obfuscated-script)
