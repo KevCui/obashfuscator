@@ -1,15 +1,35 @@
-obashfuscator
-============
+# obashfuscator
 
-obashfuscator obfuscates Bash script in order to make script unreadable at first glance and meanwhile keep it executable without losing any functionalities.
+> obashfuscator obfuscates Bash script.
+
+## Table of Contents
+
+- [obashfuscator](#obashfuscator)
+  - [Why?](#why)
+  - [Features](#features)
+  - [Dependency](#dependency)
+  - [Usage](#usage)
+    - [Examples](#examples)
+      !/usr/bin/bash])
+  - [FAQ](#faq)
+    - [Bash error "BASH_SOURCE[0]: unbound variable" when executing obfuscated script](#bash-error-bash_source0-unbound-variable-when-executing-obfuscated-script)
+    - [Bash error "Argument list too long" when executing obfuscated script](#bash-error-argument-list-too-long-when-executing-obfuscated-script)
+    - [Is it easy to deobfuscate?](#is-it-easy-to-deobfuscate)
 
 ## Why?
 
 Why not... Maybe for fun? You might tell me the reason if it's somehow useful.
 
+## Features
+
+- Make Bash script unreadable at first glance
+- Keep obfuscated script executable, without losing any functionalities
+- Integrate two methods for obfuscation: base64 mode and extended mode (using bash-obfuscate)
+
 ## Dependency
 
-No dependency for normal mode (base64 encoding). However, for extended mode, [bash-obfuscate](https://github.com/willshiao/node-bash-obfuscate) is required.
+- Normal mode (base64 encoding): No dependency
+- Extended mode: [bash-obfuscate](https://github.com/willshiao/node-bash-obfuscate)
 
 ## Usage
 
